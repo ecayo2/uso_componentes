@@ -1,0 +1,18 @@
+<app-header titulo="Inicio"></app-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item 
+    *ngFor="let pagina of paginas"
+    [routerLink]="pagina.direccion"
+    >
+      <ion-icon [name]="pagina.icono" slot="start" color="primary"></ion-icon>
+      {{pagina.nombre}}
+    </ion-item>    
+
+  </ion-list>
+
+  <!-- <ion-button routerLink="/contacto">Ver Contacto</ion-button>
+  <ion-button routerLink="/nosotros">Ver Nosotros</ion-button> -->
+</ion-content>
